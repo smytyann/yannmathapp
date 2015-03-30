@@ -1,0 +1,39 @@
+
+<h1> THE MATH QUIZ </h1>
+
+<div class="center jumbotron">
+  <div class="container center">
+      <div class="row">
+        <div class="col-xs-12">
+          <%= form_tag "/validate" do %>
+          <p> Q1 - What is the power of <%= $power_Q1_random_a%> over <%= $power_Q1_random_b%> ? 
+          <%= text_field_tag :search_string1 %></p>
+          <p> Q2 - What is the power of <%= $power_Q2_random_a%> over <%= $power_Q2_random_b%> ? 
+          <%= text_field_tag :search_string2 %></p>
+          <p> Q3 - What is the power of <%= $power_Q3_random_a%> over <%= $power_Q3_random_b%> ?
+          <%= text_field_tag :search_string3 %> </p>
+          <p> Q4 - What is the power of <%= $power_Q4_random_a%> over <%= $power_Q4_random_b%> ? 
+          <%= text_field_tag :search_string4 %></p>
+          <p> Q5 - What is the power of <%= $power_Q5_random_a%> over <%= $power_Q5_random_b%> ? 
+          <%= text_field_tag :search_string5 %></p>
+          <p> Q6 - What is the power of <%= $power_Q6_random_a%> over <%= $power_Q6_random_b%> ?
+          <%= text_field_tag :search_string6 %> </p>
+          <p> Q7 - What is the power of <%= $power_Q7_random_a%> over <%= $power_Q7_random_b%> ? 
+          <%= text_field_tag :search_string7 %></p>
+          <p> Q8 - What is the power of <%= $power_Q8_random_a%> over <%= $power_Q8_random_b%> ? 
+          <%= text_field_tag :search_string8 %></p>
+          <p> Q9 - What is the power of <%= $power_Q9_random_a%> over <%= $power_Q9_random_b%> ?
+          <%= text_field_tag :search_string9 %> </p>
+          <p> Q10 - What is <%= $power_Q10_random_a  %> % of <%= $power_Q10_random_b %> ?
+          <%= text_field_tag :search_string10 %> </p>
+
+<br />
+<br />
+<%= submit_tag "SUBMIT" %> 
+<br />
+</div>
+   </div>       
+        </div>  
+<% end %>
+
+

@@ -1,0 +1,25 @@
+<div class="center jumbotron">
+  <h1>Welcome to Student Math Quiz</h1>
+
+  <h2>
+   Before join <a href="https://www.ncirl.ie/">NCI college</a> we need to know your level of Mathematics, 
+   Please sign-up and Start the Mathematics QUIZ.
+  </h2>
+    
+  <% if user_signed_in? %>
+   <%= link_to "TAKE THE QUIZ!", "/check" , class: "btn btn-lg btn-primary" %>
+  <% else %>
+   <%= link_to "Sign up now!", new_user_session_path , class: "btn btn-lg btn-primary" %>
+  <% end %>
+  
+</div>
+<div class="container center">
+      <div class="row">
+        <div class="col-xs-12">
+        <%= link_to image_tag("frank.jpg", alt: "Frank image"), 'https://sites.google.com/a/tcd.ie/fslyne/', class: "img-thumbnail" %>
+        <%= link_to image_tag("yann.jpg", alt: "Yann image"), 'https://www.smytweb.com/' , class:"img-thumbnail" %>
+        <%= link_to image_tag("NCI.png", alt: "NCI image"), 'https://www.ncirl.ie/' , class:"img-thumbnail" %>    
+        <%= link_to image_tag("quiz.jpeg", alt: "Quiz image"), '#' , class:"img-thumbnail" %>  
+       </div>
+      </div>
+</div>
