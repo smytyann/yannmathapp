@@ -54,6 +54,7 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    exception_handler (0.3.45)
     execjs (2.4.0)
     hike (1.2.3)
     i18n (0.7.0)
@@ -149,6 +150,7 @@ DEPENDENCIES
   checkpercentage (~> 0.2.1)
   coffee-rails (~> 4.0.0)
   devise (~> 3.4.1)
+  exception_handler
   jbuilder (~> 2.0)
   jquery-rails
   pg

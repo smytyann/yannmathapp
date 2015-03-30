@@ -1,0 +1,57 @@
+<div class="container center">
+      <div class="row">
+        <div class="col-xs-12">
+   
+        <% if @status.to_s == "404" %>
+
+	      Sorry, this page is not Available!
+
+	<div class="error">
+
+		<!--Alert -->
+		<%= image_tag 'exception_handler/alert.png', width: "150", alt: "Error!", title: "Sorry, A Server Error Occurred", class: "alert" %>
+	
+		<!--Message 
+		<div class="message">
+			<strong><%= details[:name] %></strong>
+			<span><%= details[:message] %></span>
+		</div>-->
+
+		<!--Contact -->
+		<div class="contact">
+			<% ExceptionHandler.config.social.each do |item, address| %>
+				<%= link_to image_tag("exception_handler/contact/#{item}.png", title: item.to_s.titleize), address, target: :blank %>
+			<% end %>
+		</div>
+	</div>
+        <%= link_to image_tag("frank.jpg", alt: "Frank image"), 'https://sites.google.com/a/tcd.ie/fslyne/', class: "img-thumbnail" %>
+        <%= link_to image_tag("yann.jpg", alt: "Yann image"), 'https://www.smytweb.com/' , class:"img-thumbnail" %>
+        <%= link_to image_tag("NCI.png", alt: "NCI image"), 'https://www.ncirl.ie/' , class:"img-thumbnail" %>    
+        <%= link_to image_tag("quiz.jpeg", alt: "Quiz image"), '#' , class:"img-thumbnail" %>  
+       </div>
+      </div>
+</div>
+          
+<% else %>
+
+	<div class="error">
+
+		<!--Alert -->
+		<%= image_tag 'exception_handler/alert.png', width: "150", alt: "Error!", title: "Sorry, A Server Error Occurred", class: "alert" %>
+	
+		<!--Message -->
+		<div class="message">
+			<strong><%= details[:name] %></strong>
+			<span><%= details[:message] %></span>
+		</div>
+
+		<!--Contact -->
+		<div class="contact">
+			<% ExceptionHandler.config.social.each do |item, address| %>
+				<%= link_to image_tag("exception_handler/contact/#{item}.png", title: item.to_s.titleize), address, target: :blank %>
+			<% end %>
+		</div>
+		
+	</div>
+
+<% end %>
